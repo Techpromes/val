@@ -1,0 +1,128 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fde4e4;
+}
+
+header {
+    background-color: #ff6b6b;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    font-family: 'Gabriela', serif;
+    color: #ff6b6b;
+}
+
+footer {
+    background-color: #ff6b6b;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#memory-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#memory-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#memory-images img:hover {
+    transform: scale(1.05);
+}
+
+#love-notes-section {
+    text-align: center;
+}
+
+.love-note {
+    display: inline-block;
+    background-color: #ffbdbd;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.love-note:hover {
+    background-color: #ffb7b7;
+}
+
+#animated-section {
+    text-align: center;
+}
+
+#animated-graphics img {
+    max-width: 100px;
+    animation: floatAnimation 3s infinite alternate;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+#countdown-section {
+    text-align: center;
+    font-size: 24px;
+    color: #ff6b6b;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 600px) {
+    main {
+        padding: 0 10px;
+    }
+
+    #memory-images img {
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        font-size: 20px;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
+}
